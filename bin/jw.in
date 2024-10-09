@@ -246,7 +246,7 @@ then
   echo -e $SGML_HELP_MESSAGE >&2
   exit 1
 fi
-if [ ! -s $SGML_FRONTEND ]
+if [ ! -s "$SGML_FRONTEND" ]
 then
   echo "`basename $0`: There is no frontend called \"$SGML_FRONTEND\"." >&2
   exit 2
@@ -270,14 +270,14 @@ then
   echo -e $SGML_HELP_MESSAGE >&2
   exit 1
 fi
-if [ ! -s $SGML_FILE ]
+if [ ! -s "$SGML_FILE" ]
 then
   echo "`basename $0`: Cannot open \"$SGML_FILE\"." >&2
   exit 3
 fi
 
 # Separate the file name and the extension (if any)
-SGML_FILE_NAME=`basename $SGML_FILE`
+SGML_FILE_NAME=`basename "$SGML_FILE"`
 SGML_FILE_NAME=${SGML_FILE_NAME%.*}
 
 # Determine if we are in an XML file
@@ -416,7 +416,7 @@ then
 fi
 
 # Prepare the parser's arguments
-SGML_ARGUMENTS="$SGML_INCLUDE -i $SGML_TYPE -d $SGML_STYLESHEET $SGML_OPTIONS $SGML_WARNINGS $SGML_DECL $SGML_FILE"
+SGML_ARGUMENTS="$SGML_INCLUDE -i $SGML_TYPE -d $SGML_STYLESHEET $SGML_OPTIONS $SGML_WARNINGS $SGML_DECL"
 
 # Call the backend
 echo "Using catalogs: `echo $SGML_CATALOG_FILES | sed 's/:/, /g'`"
@@ -430,7 +430,7 @@ if [ -z "$NOCHUNKS" ]
 then
 	sh $SGML_BACKEND
 else
-	sh $SGML_BACKEND >$SGML_FILE_NAME.html
+	sh $SGML_BACKEND >"$SGML_FILE_NAME.html"
 fi
 SGML_RETURN=$?
 cd "$SGML_CURRENT_DIRECTORY"
