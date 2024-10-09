@@ -1,5 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(Makefile.am)
+AC_INIT
+AC_CONFIG_SRCDIR([Makefile.am])
 
 AC_DEFUN(AC_FIND_PROGRAM,
 [
@@ -36,7 +37,7 @@ dnl Checks for typedefs, structures, and compiler characteristics.
 
 dnl Checks for library functions.
 
-AC_OUTPUT(Makefile docbook-utils.spec \
+AC_CONFIG_FILES([Makefile docbook-utils.spec \
 	bin/Makefile bin/jw bin/sgmldiff \
 	backends/Makefile backends/man backends/texi \
 	frontends/Makefile frontends/docbook \
@@ -45,4 +46,5 @@ AC_OUTPUT(Makefile docbook-utils.spec \
 	doc/version \
 	doc/refentry/Makefile \
 	doc/man/Makefile \
-	doc/HTML/Makefile)
+	doc/HTML/Makefile])
+AC_OUTPUT
