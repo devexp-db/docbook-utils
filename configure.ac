@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([docbook-utils], [0.6.14])
+AC_INIT([docbook-utils], [0.6.15])
 AC_CONFIG_SRCDIR([Makefile.am])
 
 AC_DEFUN([AC_FIND_PROGRAM],
