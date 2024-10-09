@@ -1,8 +1,8 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT
+AC_INIT([docbook-utils], [0.6.14])
 AC_CONFIG_SRCDIR([Makefile.am])
 
-AC_DEFUN(AC_FIND_PROGRAM,
+AC_DEFUN([AC_FIND_PROGRAM],
 [
 $3=""
 for i in $2; do
@@ -15,7 +15,7 @@ for i in $2; do
 done
 ])
 
-AM_INIT_AUTOMAKE(docbook-utils, 0.6.14)
+AM_INIT_AUTOMAKE
 
 docdir='$(prefix)/doc'
 AC_SUBST(docdir)
