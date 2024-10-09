@@ -1,0 +1,5 @@
+- `aclocal`
+- `autoconf`
+- `automake`
+- `./configure`
+- `make`
