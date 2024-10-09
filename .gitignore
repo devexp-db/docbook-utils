@@ -1,52 +1,24 @@
-# Prerequisites
-*.d
+# Generated Makefiles
+**/Makefile
+**/Makefile.in
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Generated configure files
+config.log
+config.status
+configure
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Autotools stuff
+autom4te.cache/*
+aclocal.m4
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Generated docbook-utils files
+bin/jw
+bin/sgmldiff
+backends/man
+backends/texi
+frontends/docbook
+doc/HTML/*
+!doc/HTML/Makefile.am
+doc/man/*
+!doc/man/Makefile.am
+doc/version
