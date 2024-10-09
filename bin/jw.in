@@ -438,5 +438,7 @@ cd "$SGML_CURRENT_DIRECTORY"
 if [ $SGML_RETURN -gt 0 ]
 then exit `expr 7 + $SGML_RETURN`
 fi
-echo "Done."
+#Final echo commented out, it causes manpage noise when generating some
+#manpages with new perl(#513271, #587012)
+#echo "Done."
 exit 0
