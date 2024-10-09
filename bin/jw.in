@@ -368,7 +368,7 @@ case "$SGML_OPTIONS" in
 	fi
 	if [ -n "$papersize" ]
 	then
-	  SGML_OPTIONS="-V paper-type=$papersize $SGML_OPTIONS"
+	  SGML_OPTIONS="-V %paper-type%=$papersize $SGML_OPTIONS"
 	fi
 	;;
 esac
