@@ -13,7 +13,7 @@ then
 elif [ -x /usr/bin/w3m ]
 then
   CONVERT=/usr/bin/w3m
-  ARGS="-dump"
+  ARGS="-T text/html -dump"
 else
   echo >&2 "No way to convert HTML to text found."
   exit 1
