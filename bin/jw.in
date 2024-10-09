@@ -81,9 +81,9 @@ SGML_CATALOGS_DIR="/etc/sgml"
 if [ -f "$SGML_CONF" ]
 then
   RE='^[:space:]*SGML_BASE_DIR[:space:]*=[:space:]*'
-  SGML_BASE_DIR=`grep $RE $SGML_CONF | sed "s/$RE//"`
+  SGML_BASE_DIR=`grep --color=never $RE $SGML_CONF | sed "s/$RE//"`
   RE='^[:space:]*SGML_CATALOGS_DIR[:space:]*=[:space:]*'
-  SGML_CATALOGS_DIR=`grep $RE $SGML_CONF | sed "s/$RE//"`
+  SGML_CATALOGS_DIR=`grep --color=never $RE $SGML_CONF | sed "s/$RE//"`
 fi
 
 # Set frontend to use
